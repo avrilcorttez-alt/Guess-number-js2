@@ -25,8 +25,50 @@ console.log("Mi nombre es ", nombreUsuario);
 console.log("Mi edad es ", miEdad)
 console.log("El tipo de dato que nos da prompt es "+typeof nombreUsuario);
 console.log("El tipo de dato que nos da prompt es "+typeof miEdad);
-
 alert("Bienvenidos al cuntiest sitioweb");
+
+let Edad = prompt("¿Cuántos años tienes?");
+edad = Number(Edad);
+
+if (edad >= 18) {
+  alert("Puedes votar 🗳️");
+} else {
+  alert("Aún no puedes votar 🧒");
+}
+
+let temperatura = Number(prompt("¿Qué temperatura hace hoy?"));
+
+if (temperatura < 15) {
+  alert("Hace frío, ponte abrigo 🧥");
+} else if (temperatura <= 25) {
+  alert("Clima templado, usa casaca ligera 🧢");
+} else {
+  alert("Hace calor, usa polo y gorra ☀️");
+}
+
+let clave = prompt("Crea una contraseña:");
+if (clave.length >= 6) {
+  alert("Contraseña válida ✅");
+} else {
+  alert("Contraseña muy corta ❌");
+}
+
+if (edad < 13) {
+  alert("Eres un niño 🧒");
+} else if (edad <= 17) {
+  alert("Eres un adolescente 👦");
+} else {
+  alert("Eres un adulto 👨‍🦱");
+}
+
+if (edad > 18 && temperatura < 15) {
+  alert("Adulto con frío: lleva abrigo extra 🧣");
+}
+
+if (edad  < 18 && temperatura > 25) {
+  alert("Niño con calor: usa ropa ligera 🧢");
+}
+
 
 let a = 7;
 let b = 3;
@@ -49,3 +91,4 @@ let anioActual =2026;
 let anioNacimiento = anioActual - Number(edadUsuario);
 
 console.log(`Hola ${nombreUsuario}, naciste aproximadamente en ${anioNacimiento}`);
+
