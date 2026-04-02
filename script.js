@@ -12,15 +12,21 @@ const MAX_INTENTOS = 10;
 
 
 // --- Variables del juego ---
+let nombre = prompt("👋 Hola! ¿Cuál es tu nombre?");
+let edad = prompt("🎂 ¿Cuántos años tienes?");
 let numeroSecreto = Math.floor(Math.random() * 100) + 1;
 let intentos = 0;
 let historialIntentos = [];
 let mejorPuntaje = null;
 
+
+
 console.log('(DEBUG) Número secreto:', numeroSecreto);
 
 console.log('Elementos conectados:', inputIntento, btnAdivinar, mensaje);
 
+console.log("Nombre:", nombre);
+console.log("Edad:", edad);
 
 // --- Tu primera función ---
 function mostrarMensaje(texto, color) {
@@ -30,7 +36,7 @@ function mostrarMensaje(texto, color) {
 
 // Prueba la función
 mostrarMensaje('¡BIENVENIDO A LOS JUEGOS DEL HAMBRE!', '#ffffff');
-
+mensaje.textContent = `👋 ¡HOLA, ${nombre}! ¿Tienes ${edad} años? ADIVINA EL NÚMERO, TIENES ${MAX_INTENTOS} INTENTOS`;
 // --- Función principal ---
 function verificarIntento() {
   let valor = Number(inputIntento.value);
@@ -64,7 +70,7 @@ historial.innerHTML += '<span class="guess-pill" style="background:' + color + '
     mostrarMensaje('📈 Muy alto. ' + pista, '#ff009d');
   } else {
     let pista = obtenerPista(valor, numeroSecreto);
-    mostrarMensaje('📉 Muy bajo. ' + pista, '#4ecdc4');
+    mostrarMensaje('📉 Muy bajo. ' + pista, '#e4a6ff');
   }
   // --- Pista de cercanía ---
 function obtenerPista(intento, secreto) {

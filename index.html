@@ -22,6 +22,8 @@ body {
   color: white;
 }
 
+
+
 /* TARJETA PIXEL */
 .game-card {
   background: #2d2da8;
@@ -127,6 +129,28 @@ button:active {
   );
 }
 
+.nave {
+  position: absolute;
+  top: 60px;
+  left: 20%;
+  width: 80px;
+  animation: flotar 3s infinite ease-in-out;
+}
+
+.planeta {
+  position: absolute;
+  bottom: 80px;
+  right: 15%;
+  width: 70px;
+}
+
+/* ✨ Animación flotante */
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
 /* BOTÓN REINICIAR */
 #btnReiniciar {
   margin-top: 20px;
@@ -142,6 +166,8 @@ button:active {
   </style>
 </head>
 <body>
+<img src="https://cdn-icons-png.flaticon.com/512/3212/3212608.png" class="nave">
+<img src="https://cdn-icons-png.flaticon.com/512/616/616490.png" class="planeta">
   <div class="game-card" id="game-card">
     <h1>🎯 Adivina el Número</h1>
     <p class="subtitle">Estoy pensando en un número del 1 al 100...</p>
@@ -163,4 +189,5 @@ button:active {
 
   <script src="script.js"></script>
 </body>
+
 </html>
